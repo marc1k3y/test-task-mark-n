@@ -1,10 +1,10 @@
 import "./App.css";
-import { Auth } from "./auth";
+import { CharacterBuilder } from "./characterBuilder";
 
 export default function App() {
   return (
     <div className="App">
-      <Auth />
+      <CharacterBuilder />
     </div>
   );
 }
