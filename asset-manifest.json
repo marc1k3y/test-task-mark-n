@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/test-task-mark-n/static/css/main.b00ef916.css",
+    "main.js": "/test-task-mark-n/static/js/main.11133e9a.js",
+    "static/media/chemist.svg": "/test-task-mark-n/static/media/chemist.ae75c8a1f0ec3d2dd3ff86849121bff5.svg",
+    "static/media/warrior.svg": "/test-task-mark-n/static/media/warrior.f6989b4d447c69fbab3757ee5e33bd20.svg",
+    "static/media/robot.svg": "/test-task-mark-n/static/media/robot.c5db622b37912f8c63932f6815614161.svg",
+    "static/media/psycho.svg": "/test-task-mark-n/static/media/psycho.7747fafa8b22eb1785ac26e957259c7a.svg",
+    "static/media/hitman.svg": "/test-task-mark-n/static/media/hitman.9c7848e91989fd87fa0293bda58943a2.svg",
+    "static/media/superheroe.svg": "/test-task-mark-n/static/media/superheroe.d0a7bdd28d2f1a76101dca1fddf98d7c.svg",
+    "static/media/cool.svg": "/test-task-mark-n/static/media/cool.cc1f055452b5b4b07d5d18f1d44e6961.svg",
+    "static/media/alien.svg": "/test-task-mark-n/static/media/alien.229a91d70ba99c61129c197b13ceedfa.svg",
+    "static/media/arrow.svg": "/test-task-mark-n/static/media/arrow.2fee38cb5f169241fa349a21c434bd1f.svg",
+    "static/media/next.svg": "/test-task-mark-n/static/media/next.35bac0c7c17f5de2ed66671545981097.svg",
+    "static/media/back.svg": "/test-task-mark-n/static/media/back.0adedac22d46876a2a829f2de1b273cd.svg",
+    "static/media/plus.svg": "/test-task-mark-n/static/media/plus.efa8784b8486ec00f6b95bdedd7123e5.svg",
+    "index.html": "/test-task-mark-n/index.html",
+    "static/media/edit.svg": "/test-task-mark-n/static/media/edit.69947dc1a78cd3ab3abd176b729fb0a9.svg",
+    "static/media/minus.svg": "/test-task-mark-n/static/media/minus.7d8278eadf4203de0eddd196d202f606.svg",
+    "main.b00ef916.css.map": "/test-task-mark-n/static/css/main.b00ef916.css.map",
+    "main.11133e9a.js.map": "/test-task-mark-n/static/js/main.11133e9a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b00ef916.css",
+    "static/js/main.11133e9a.js"
+  ]
+}
