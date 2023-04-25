@@ -27,9 +27,9 @@ function setSize(size: "small" | "medium" | "large") {
 export const MyInput = ({ label, value, onChange, type, labelAlign, size, bgColor, capitalize }: Props) => {
   const { fontSize, padding }: { fontSize: string, padding: string } = setSize(size);
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
+    <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "4px" }}>
       <div style={{ textAlign: labelAlign, fontSize: fontSize }}>{label}</div>
-      <input type={type} value={value} onChange={onChange} style={{ borderRadius: "5px", border: "none", outline: "none", backgroundColor: bgColor, fontSize: fontSize, padding: padding, textTransform: capitalize ? "capitalize" : "none" }} />
+      <input type={type} value={value} onChange={onChange} style={{ borderRadius: "5px", border: "none", outline: "none", backgroundColor: bgColor, fontSize: fontSize, padding: padding, textTransform: capitalize ? "capitalize" : "none", width: "60%", textAlign: "center" }} />
     </div>
   );
 }

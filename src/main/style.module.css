@@ -1,0 +1,202 @@
+.wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.baseParams {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  background-color: #44403c;
+  color: #fbbf24;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.editBtn {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.character {
+  display: flex;
+  align-items: center;
+}
+
+.character>.left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.character>.left>.characterName {
+  font-size: 2rem;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.character>.right {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.character img {
+  width: 180px;
+}
+
+.characterParameter {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  width: 200px;
+  font-size: 1.25rem;
+}
+
+.characterParameter>.line1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.characterParameter>.line2 {
+  width: 100%;
+  height: 16px;
+  border-radius: 5px;
+  background-color: #44403c;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 4px;
+}
+
+.exportBtn {
+  background-color: transparent;
+  border: none;
+  padding: 5px 10px;
+  background-color: #44403c;
+  color: #fbbf24;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.skills {
+  display: flex;
+  gap: 8px;
+  color: #262626;
+  border-radius: 5px;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.skill {
+  position: relative;
+  padding: 10px 24px;
+}
+
+.skillLabel {
+  display: flex;
+  gap: 8px;
+}
+
+.skillVisibleBtn {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.skillOptions {
+  width: 100%;
+  position: absolute;
+  top: 35px;
+  display: flex;
+  flex-direction: column;
+  background-color: #44403c;
+  color: #fbbf24;
+  border-radius: 5px;
+  z-index: 200;
+  padding: 5px;
+  width: fit-content;
+}
+
+.skillOption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  gap: 5px;
+}
+
+.optionSkillValue {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.optionSkillValue button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.damageBtn {
+  background-color: #262626;
+  color: #fbbf24;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.25rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.damageBtn:active {
+  background-color: #fbbf24;
+  color: #262626;
+}
+
+.damageBtn:disabled {
+  background-color: #44403c;
+  color: gray;
+  cursor: not-allowed;
+}
+
+.editParamsModal {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 200px;
+}
+
+.editParamsModal>div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.paramController {
+  display: flex;
+  align-items: center;
+  font-size: 1.25rem;
+  gap: 2px;
+}
+
+.paramController button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}

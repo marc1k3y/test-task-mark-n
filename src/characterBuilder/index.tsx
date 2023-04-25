@@ -1,44 +1,48 @@
+import React from "react";
 import css from "./style.module.css";
-import { useState } from "react";
 import { MyInput } from "../components/MyInput";
-
-import alien from "../assets/alien.svg";
-import chemist from "../assets/chemist.svg";
-import cool from "../assets/cool.svg";
-import hitman from "../assets/hitman.svg";
-import psycho from "../assets/psycho.svg";
-import robot from "../assets/robot.svg";
-import sh from "../assets/superheroe.svg";
-import warrior from "../assets/warrior.svg";
 import back from "../assets/back.svg";
 import next from "../assets/next.svg";
 
-export const CharacterBuilder = () => {
-  const characterList = [alien, chemist, cool, hitman,
-    psycho, robot, sh, warrior];
-  const [character, setCharacter] = useState({
-    name: "", picture: 0
-  });
+function Upload({ setImportData }: any) {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const fileReader = new FileReader();
+    if (e.target.files) {
+      fileReader.readAsText(e.target.files[0], "UTF-8");
+      fileReader.onload = (e: any) => {
+        setImportData(JSON.parse(e.target.result));
+      }
+    }
+  }
+  return (
+    <label className={css.importCharacterInput}>
+      <input type="file" onChange={handleChange} />
+      Import
+    </label>
+  );
+}
 
+export const CharacterBuilder = ({ characterList, character, setCharacter, setBuilderMode, setImportData }: any) => {
   function backHandler() {
-    setCharacter((prev) => ({
+    setCharacter((prev: any) => ({
       ...prev, picture: character.picture === 0
         ? characterList.length - 1 : character.picture - 1
     }));
   }
 
   function nextHandler() {
-    setCharacter((prev) => ({
+    setCharacter((prev: any) => ({
       ...prev, picture: character.picture === characterList.length - 1
         ? 0 : character.picture + 1
     }));
   }
   return (
     <div className={css.wrapper}>
+      <Upload setImportData={setImportData} />
       <MyInput
-        label="Hero name"
+        label="Имя героя"
         value={character.name}
-        onChange={(e) => setCharacter((prev) => ({ ...prev, name: e.target.value }))}
+        onChange={(e) => setCharacter((prev: any) => ({ ...prev, name: e.target.value }))}
         type="text"
         labelAlign="center"
         size="large"
@@ -53,8 +57,8 @@ export const CharacterBuilder = () => {
           <img src={next} alt="next" />
         </button>
       </div>
-      <button disabled={character.name.length < 3}>
-        Create
+      <button disabled={character.name.length < 3} onClick={() => setBuilderMode(false)}>
+        Создать
       </button>
     </div>
   );
