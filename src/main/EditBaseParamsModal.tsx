@@ -1,17 +1,21 @@
 import css from "./style.module.css";
-import minus from "../assets/minus.svg";
 import plus from "../assets/plus.svg";
+import minus from "../assets/minus.svg";
 
-export const EditBaseParamsModal = ({ baseParams, setBaseParams }: any) => {
+import { BaseParamsIE } from "../types";
+
+
+export const EditBaseParamsModal = ({ baseParams, setBaseParams }:
+  { baseParams: BaseParamsIE, setBaseParams: (arg0: any) => void }) => {
   function incrementParam(param: "power" | "sleight" | "intelligence" | "charisma") {
     if (baseParams[param] < 100) {
-      setBaseParams((prev: any) => ({ ...prev, [param]: baseParams[param] + 1 }));
+      setBaseParams((prev: BaseParamsIE) => ({ ...prev, [param]: baseParams[param] + 1 }));
     }
   }
 
   function decrementParam(param: "power" | "sleight" | "intelligence" | "charisma") {
     if (baseParams[param] > 0) {
-      setBaseParams((prev: any) => ({ ...prev, [param]: baseParams[param] - 1 }));
+      setBaseParams((prev: BaseParamsIE) => ({ ...prev, [param]: baseParams[param] - 1 }));
     }
   }
   return (

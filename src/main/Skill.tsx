@@ -1,11 +1,15 @@
 import css from "./style.module.css";
-import { useState } from "react";
-import arrow from "../assets/arrow.svg";
 import plus from "../assets/plus.svg";
+import arrow from "../assets/arrow.svg";
 
-export const Skill = ({ state, setState, maxValue }: any) => {
+import { useState } from "react";
+import { SkillIE, SkillOptionIE } from "../types";
+
+
+export const Skill = ({ state, setState, maxValue }:
+  { state: SkillIE, setState: (arg0: any) => void, maxValue: number }) => {
   const { label, options } = state;
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState<boolean>(false);
 
   function incrementValue(i: number) {
     const copyOptions = options;
@@ -14,7 +18,7 @@ export const Skill = ({ state, setState, maxValue }: any) => {
     if (condition) {
       option["value"] = option["value"] + 1;
       copyOptions[i] = option;
-      setState((prev: any) => ({ ...prev, options: copyOptions }));
+      setState((prev: SkillIE) => ({ ...prev, options: copyOptions }));
     }
   }
   return (
@@ -28,7 +32,7 @@ export const Skill = ({ state, setState, maxValue }: any) => {
         </button>
       </div>
       <div style={{ display: visible ? "flex" : "none" }} className={css.skillOptions}>
-        {options.map((option: any, i: number) => (
+        {options.map((option: SkillOptionIE, i: number) => (
           <div key={option.title} className={css.skillOption}>
             <div>
               {option.title}

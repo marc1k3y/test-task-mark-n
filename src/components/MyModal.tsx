@@ -1,6 +1,13 @@
 import { SyntheticEvent } from "react";
 
-export const MyModal = ({ visible, setVisible, children }: any) => {
+
+interface Props {
+  visible: boolean
+  setVisible: (arg0: boolean) => void
+  children: JSX.Element
+}
+
+export const MyModal = ({ visible, setVisible, children }: Props) => {
   function closeModal() {
     setVisible(false);
   }

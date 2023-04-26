@@ -1,6 +1,8 @@
 import css from "./style.module.css";
 
-export const Stats = ({ label, value }: any) => {
+
+export const Stats = ({ label, value }:
+  { label: string, value: number }) => {
   return (
     <div className={css.characterParameter}>
       <div className={css.line1}>

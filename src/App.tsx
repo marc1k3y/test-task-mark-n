@@ -12,15 +12,18 @@ import robot from "./assets/robot.svg";
 import sh from "./assets/superheroe.svg";
 import warrior from "./assets/warrior.svg";
 
+import { CharacterIE, ImportDataIE } from "./types";
+
+
 export default function App() {
   const characterList = [alien, chemist, cool, hitman,
     psycho, robot, sh, warrior];
 
   const [builderMode, setBuilderMode] = useState(true);
-  const [character, setCharacter] = useState({
-    name: "", picture: 0
+  const [character, setCharacter] = useState<CharacterIE>({
+    name: "", pictureIndex: 0
   });
-  const [importData, setImportData] = useState(null);
+  const [importData, setImportData] = useState<ImportDataIE | null>(null);
 
   useEffect(() => {
     if (importData) {
